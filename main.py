@@ -20,9 +20,9 @@ def open_file():
         text_area.insert(tkinter.END, "erreur lors de la récupération du fichier")
 
 def run():
-    #résultat de l'appui du bouton run : sauvegarder dans le dossier to_run
-    file_path =  '/home/cytech/Bureau/cy-sketch/to_run/to_execute.dpp'
-    os.system("rm /home/cytech/Bureau/cy-sketch/to_run/*.dpp")
+    #résultat de l'appui du bouton run : sauvegarder dans le dossier .to_run
+    file_path =  './.to_run/to_execute.dpp'
+    os.system("rm ./.to_run/*.dpp")
     
     print("%d", file_path)
     if file_path: #si le fichier a bien ete enregistrer
@@ -33,14 +33,14 @@ def run():
     print("Running the code...")
 
 
-# je creer le fichier to_run pour executer les fichiers .dpp avec le compilateur a venir
+# je creer le fichier .to_run pour executer les fichiers .dpp avec le compilateur a venir
 #je check le système d'exploitation sur lequel l'appli est
-if not os.path.isdir("to_run") and platform.system() == "Linux":
-    os.system("mkdir to_run")
-    print("no 'to_run' directory, one has just been created")
-elif os.path.isdir("to_run") and platform.system() == "Windows":
-    os.system("mkdir to_run")
-    print("no 'to_run' directory, one has just been created")
+if not os.path.isdir(".to_run") and platform.system() == "Linux":
+    os.system("mkdir .to_run")
+    print("no '.to_run' directory, one has just been created")
+elif os.path.isdir(".to_run") and platform.system() == "Windows":
+    os.system("mkdir .to_run")
+    print("no '.to_run' directory, one has just been created")
 
 
 
