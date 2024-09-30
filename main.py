@@ -35,12 +35,13 @@ def run():
 
 # je creer le fichier to_run pour executer les fichiers .dpp avec le compilateur a venir
 #je check le système d'exploitation sur lequel l'appli est
-if not os.path.isdir(".to_run") and platform.system() == "Linux":
+if not os.path.isdir("to_run") and platform.system() == "Linux":
     os.system("mkdir to_run")
     print("no 'to_run' directory, one has just been created")
-elif os.path.isdir(".to_run") and platform.system() == "Windows":
+elif os.path.isdir("to_run") and platform.system() == "Windows":
     os.system("mkdir to_run")
     print("no 'to_run' directory, one has just been created")
+
 
 
 #Création de l'envirronement Tkinter
